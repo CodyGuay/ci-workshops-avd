@@ -6,7 +6,9 @@ aaa_root:
 banners:
   motd: 'You shall not pass. Unless you are authorized. Then you shall pass.
 
-    EOF'
+    EOF
+
+    '
 config_end: true
 daemon_terminattr:
   cvaddrs:
@@ -97,6 +99,15 @@ local_users:
   sha512_password: $6$arista$9iuh0UbSZuL7Et0qGLraFXLsVTQNeHVpD7jvl3OaohOslv5rSsgII8qAXsWXGBp5lv61.PLsEYQTloac0SJ1Q1
   ssh_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC7NlreeFypOMe1z5Ud1xiNcKYdTcpleX1tNOwiTrInHlhkV+Puu/oahjOZBpnwrjbcE4QBVt3aFVNHZnKTwigMk3GzmJC7T4SDrt0ydu2EjCW4VSGggdfPMM+dUC9ZENNAG+7EibhlsmLsqQFy83aEh2gQMtJH399/LwBKrPMbhH/5Sf3lg5qk82rKPgypRK/ajmsPU/j8UEERwzwqRGDFR56X9De/+Srempxodr317wmP07533rPcFz/jRA4N+1AgwK0UKPZGp8aHp1CGzerqnMcxHu3P2YfFp+10nsoemqNmvt+MTnX/SW7wxsG5KtRmqOOf8rXrZsNilgt+fDG5
     arista@rochester-day2-10-c3c84b07-eos
+logging:
+  vrfs:
+  - name: default
+    source_interface: Management0
+    hosts:
+    - name: 10.200.0.108
+      protocol: udp
+    - name: 10.200.1.108
+      protocol: udp
 loopback_interfaces:
 - name: Loopback0
   description: ROUTER_ID
